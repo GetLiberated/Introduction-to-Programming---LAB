@@ -2,9 +2,9 @@
 # 2201797052
 
 #### CLASS CALCULATOR ####
-# For this method, You must input the number like this: 1+1
+# For this method, You must input the number like this: 1+1 *ENTER*
 # You can't input like this: 1 *ENTER* + *ENTER* 1
-
+# After getting the result, you can input again like this: +1 *ENTER*
 
 stack=[] # Create List.
 x=True
@@ -42,7 +42,7 @@ while x is True: # Create infinite loop.
             stack.append(self.number0 / self.number)
 
     calculator = Calculator(a,b) # assign class as 'calculator' and also 'a' & 'b' as the parameter
-    if op=='+': # if operator is plus, do dis module from inside the Calculator class.
+    if op=='+': # if 'op' is '+', do dis module from inside the Calculator class.
         calculator.plus()
     if op=='-': # self explainatory, just like above
         calculator.minus()
