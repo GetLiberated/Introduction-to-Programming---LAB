@@ -1,71 +1,49 @@
-# class Test:
-#     def fun(self):
-#         print('Hello')
-#
-# obj = Test()
-# obj.fun()
-#
-# # You can't call out class, you must assign it into a variable.
-# # You can't call out module inside the class
-#
-# class Person:
-#     def __init__(self, name, age):
-#         self.name = name
-#         self.age = age
-#
-#     def say_hi(self):
-#         print('Hello, my name is', self.name, "and im", self.age)
-#
-#
-# p = Person('Shwetanshu', "18")
-# p.say_hi()
-#
-# me = Person('Eris',18)
-# me.say_hi()
+#### CLASS CALCULATOR ####
+# For this method, You must input the number like this: 1+1
+# You can't input like this: 1 *ENTER* + *ENTER* 1
 
-#### Class Calculator ####
 
-stack=[]
+stack=[] # Create List.
 x=True
-while x is True:
+while x is True: # Create infinite loop.
 
-    num=input()
-    stack.extend(num)
+    num=input() # Input.
+    stack.extend(num) # Slice string that you input into stack as individual strings. ex: '1+1' -> '1','+','1'
 
-    if num=='q':
+    if num=='q': # Enter q to stop.
         break
 
-    a=int(stack.pop())
-    op=stack.pop()
-    b=int(stack.pop())
+    a=int(stack.pop()) # Create variable 'a' : Take the string you input as integer (In this case number)
+    op=stack.pop() # Create variable 'op' : Take another one as string (In this case operator)
+    b=int(stack.pop()) # Create variable 'b' : And another as integer (In this case number)
 
-    class Calculator:
-        def __init__(self,a,b):
-            self.number = a
-            self.number0 = b
+    class Calculator: # Create Class.
+        def __init__(self,one,two): # Initialize parameter
+            self.number = one
+            self.number0 = two
 
-        def plus(self):
+        def plus(self): # Module for plus
             print('=',self.number + self.number0)
             stack.append(self.number + self.number0)
 
-        def minus(self):
+        def minus(self): # Module for minus
             print('=',self.number - self.number0)
             stack.append(self.number - self.number0)
 
-        def kali(self):
+        def kali(self): # Module for times
             print('=',self.number * self.number0)
             stack.append(self.number * self.number0)
 
-        def bagi(self):
+        def bagi(self): # Module for obelus
             print('=',self.number0 / self.number)
             stack.append(self.number0 / self.number)
 
-    calculator = Calculator(a,b)
-    if op=='+':
+    calculator = Calculator(a,b) # assign class as 'calculator' and also 'a' & 'b' as the parameter
+    if op=='+': # if operator is plus, do dis module from inside the Calculator class.
         calculator.plus()
-    if op=='-':
+    if op=='-': # self explainatory, just like above
         calculator.minus()
-    if op=='*':
+    if op=='*': # are you even still asking what's this?
         calculator.kali()
-    if op=='/':
+    if op=='/': # bruh
         calculator.bagi()
