@@ -2,9 +2,11 @@
 # 2201797052
 
 #### CLASS CALCULATOR ####
-# For this method, You must input the number like this: 1+1 *ENTER*
-# You can't input like this: 1 *ENTER* + *ENTER* 1
-# After getting the result, you can input again like this: +1 *ENTER*
+# For this method, You must input the number like this: 1+1 *ENTER* (!!! NO SPACES !!!)
+# You can't input like this: 1 *ENTER* + *ENTER* 1 *ENTER*
+# After getting the result, you can continue input again like this: +1 *ENTER*
+# Please be gentle and don't input something like this: 1+2002-3840*100080/4000000402020020
+# This calculator only support one operator at a time. ^^
 
 stack=[] # Create List.
 x=True
