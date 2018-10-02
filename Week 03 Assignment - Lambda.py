@@ -23,7 +23,7 @@ while x is True: # Create infinite loop.
     b=int(stack.pop()) # Create variable 'b' : And another as integer (In this case number)
 
     plus = lambda a,b: a+b # Plus lambda
-    minus = lambda a,b: a-b # Minus lambda
+    minus = lambda a,b: b-a # Minus lambda
     kali = lambda a,b: a*b # Times lambda
     bagi = lambda a,b: b/a # Obelus lambda
 
