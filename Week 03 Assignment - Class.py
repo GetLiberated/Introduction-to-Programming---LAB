@@ -2,7 +2,7 @@
 # 2201797052
 
 #### CLASS CALCULATOR ####
-# For this method, You must input the number like this: 1+1 *ENTER* (!!! NO SPACES !!!) (Ask me if you want the input with spaces version.)
+# For this method, You must input the number like this: 1+1 *ENTER* (!!! NO SPACES !!!) (Let me know if you want the input with spaces version.)
 # You can't input like this: 1 *ENTER* + *ENTER* 1 *ENTER*
 # After getting the result, you can continue input again like this: +1 *ENTER*
 # Please be gentle and don't input something like this: 1+2002-3840*100080/4000000402020020
