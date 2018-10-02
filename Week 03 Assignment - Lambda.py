@@ -1,54 +1,39 @@
-# x=lambda a:a*10
-# print(x(5))
-#
-# ex=[1,2,3,4,5]
-# x=lambda a:a[-1]
-# print(x(ex))
-#
-# ex={'a':1,'b':2}
-# x=lambda a:a['a']
-# print(x(ex))
-#
-# def a(b):
-#     return lambda a:a*b
-# b=a(2)
-# print(b(3))
-#
-# def a(d):
-#     return lambda a,b,c:a+b+c+d
-# b=a(2)
-# print(b(3,4,5))
+# Muhammad Erizky Suryaputra
+# 2201797052
 
 #### LAMBDA CALCULATOR ####
+# For this method, You must input the number like this: 1+1
+# You can't input like this: 1 *ENTER* + *ENTER* 1
 
-stack=[]
+
+stack=[] # Create List.
 x=True
-while x is True:
+while x is True: # Create infinite loop.
 
-    num=input()
-    stack.extend(num)
+    num=input() # Input.
+    stack.extend(num) # Slice string that you input into stack as individual strings. ex: '1+1' -> '1','+','1'
 
-    if num=='q':
+    if num=='q': # Enter q to stop.
         break
 
-    a=int(stack.pop())
-    op=stack.pop()
-    b=int(stack.pop())
+    a=int(stack.pop()) # Create variable 'a' : Take the string you input as integer (In this case number)
+    op=stack.pop() # Create variable 'op' : Take another one as string (In this case operator)
+    b=int(stack.pop()) # Create variable 'b' : And another as integer (In this case number)
 
-    plus = lambda a,b: a+b
-    minus = lambda a,b: a-b
-    kali = lambda a,b: a*b
-    bagi = lambda a,b: b/a
+    plus = lambda a,b: a+b # Plus lambda
+    minus = lambda a,b: a-b # Minus lambda
+    kali = lambda a,b: a*b # Times lambda
+    bagi = lambda a,b: b/a # Obelus lambda
 
-    if op=='+':
+    if op=='+': # If 'op' is '+' then print '=' and Plus lambda with parameter of 'a' and 'b'
         print('=',plus(a,b))
         stack.append(plus(a,b))
-    if op=='-':
+    if op=='-': # If 'op' is '-' then print '=' and Minus lambda with parameter of 'a' and 'b'
         print('=',minus(a,b))
         stack.append(minus(a,b))
-    if op=='*':
+    if op=='*': # If 'op' is '*' then print '=' and Times lambda with parameter of 'a' and 'b'
         print('=',kali(a,b))
         stack.append(kali(a,b))
-    if op=='/':
+    if op=='/': # If 'op' is '/' then print '=' and Obelus lambda with parameter of 'a' and 'b'
         print('=',bagi(a,b))
         stack.append(bagi(a,b))
