@@ -32,8 +32,8 @@ while x is True: # Create infinite loop.
             stack.append(self.number + self.number0)
 
         def minus(self): # Module for minus
-            print('=',self.number - self.number0)
-            stack.append(self.number - self.number0)
+            print('=',self.number0 - self.number)
+            stack.append(self.number0 - self.number)
 
         def kali(self): # Module for times
             print('=',self.number * self.number0)
