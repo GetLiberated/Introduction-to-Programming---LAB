@@ -1,3 +1,6 @@
+# Muhammad Erizky Suryaputra
+# 2201797052
+
 #### CLASS CALCULATOR ####
 # For this method, You must input the number like this: 1+1
 # You can't input like this: 1 *ENTER* + *ENTER* 1
