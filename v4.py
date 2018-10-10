@@ -199,7 +199,7 @@ class Vehicle(TollGate,TollGate2):
 
 print('================================================================================\n                               Toll Payment Systems\n                                PT Jasa Marga, Tbk.\n================================================================================')
 while True:
-    ask = input('\nSelect location of Toll Gate:\n1. Meruya\n2. Pondok Aren\nPress 3 for the total number of vehicles passing and total revenue of the day on all toll booth on each/both gates.\n> ')
+    ask = input('\nSelect location of Toll Gate:\n1. Meruya\n2. Pondok Aren\nPress 3 for the total number of vehicles passing and total revenue of the day on all toll booth at each/both gates.\n> ')
     if ask == '1':
 
         while True:
