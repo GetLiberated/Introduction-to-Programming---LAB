@@ -17,19 +17,10 @@ def run_game():
     screen = pygame.display.set_mode((800, 600))
 
     # create program name
-    display.set_caption("Jet mission")
+    display.set_caption("Dank Mission")
 
     # initialize score
     scores = 0
-
-    # load bg image for game
-    bg_image = Star_bg("star.gif")
-
-    # coordinate of moving background
-    x = 0
-    y = 0
-    x1 = bg_image.width
-    y1 = 0
 
     # initialize all imported pygame modules
     pygame.init()
@@ -52,22 +43,15 @@ def run_game():
         theClock.tick(Fps)
         Fps += 0.01 # game phase goes faster after every frame
 
-        # make bg move
-        x -= 5
-        x1 -= 5
-        bg_image.draw(screen,x,y)
-        bg_image.draw(screen,x1,y1)
-        if x < -bg_image.width:
-            x = 0
-        if x1 < 0:
-            x1 = bg_image.width
-
         # create score board
-        font=pygame.font.SysFont("Times New Romans",36) # create font
+        font=pygame.font.Font("Minecraft.ttf",36) # create font
         score_board=font.render("score:"+str(scores),True,(255,255,255))
 
         # update referred to the word's method
         screen.blit(score_board,(10,550))
+
+        # load bg image for game
+        screen.fill(pygame.Color(15, 77, 143))
 
         # create jet
         Jet_sprites.draw(screen)
@@ -112,7 +96,7 @@ def run_game():
 
         # ESC
         if key[K_ESCAPE]:
-            break
+            menu.pause_menu(Button,run_game)
 
         # P
         if key[K_p]:
@@ -139,61 +123,9 @@ def run_game():
                 bullets.remove(bullet)
             if groupcollide(bullets,asteroid_group,dokilla=True,dokillb=True):
                 scores += 100
+                pygame.mixer.music.load('oof.mp3')
+                pygame.mixer.music.play(0)
+
 
 # run game
 menu.menu_screen(Button,run_game)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# something scary down there..
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#---------------SPECIAL THANKS to Pier,Excel,georgius,William,Nicander,Nicolas,Andy,Guntur,Adrian-----------------------
-"""Acknowledgement:
-LaserBlast.wav(shooting sound) http://soundbible.com/472-Laser-Blasts.html
-"""

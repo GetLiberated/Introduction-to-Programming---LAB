@@ -9,10 +9,10 @@ class Jet(Sprite):
         Sprite.__init__(self)
 
         # load jet image
-        self.image = image.load("battlejet.png")
+        self.image = image.load("nyan.gif")z
 
         # resize image
-        self.image = pygame.transform.scale(self.image, (90, 50))
+        self.image = pygame.transform.scale(self.image, (140, 50))
 
         # create hit box for jet
         self.rect = self.image.get_rect()
@@ -21,7 +21,7 @@ class Jet(Sprite):
         self.screen = screen
 
         # create jet speed
-        self.move_speed = 6
+        self.move_speed = 10
 
         #fire rate speed
         self.firerates = 2
