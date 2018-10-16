@@ -3,10 +3,6 @@ import matplotlib.pylab as plot
 import math as m
 import sys
 
-v = [0]
-angle = [0]
-t = [0]
-ts = [0]
 x = [0]
 y = [0]
 
@@ -14,19 +10,15 @@ num = int(input('How many projectile you want to create? >> '))+1 # Create how m
 
 for i in range(1,num):
     
-    vi = int(input('Enter the no {} initial velocity (m/s) >> '.format(i))) # Input vector
-    v.append(vi)
+    v = int(input('Enter the no {} initial velocity (m/s) >> '.format(i))) # Input vector
     g = 9.8
-    anglei = m.radians(int(input('Enter the no {} angle of projection (degrees) >> '.format(i)))) # Input degree
-    angle.append(anglei)
+    angle = m.radians(int(input('Enter the no {} angle of projection (degrees) >> '.format(i)))) # Input degree
 
-    ti = ((2*v[i])*np.sin(angle[i]))/g   # Formula to find time
-    t.append(ti)
-    tsi = t[i]*np.linspace(0,1)  # Time vector
-    ts.append(tsi)
+    t = ((2*v)*np.sin(angle))/g   # Formula to find time
+    ts = t*np.linspace(0,1)  # Time vector
 
-    xi = (v[i]*ts[i])*np.cos(angle[i])  # Formula to find the x position
-    yi = (v[i]*ts[i])*np.sin(angle[i]) - (g/2)*(ts[i]**2)  # Formula to find y position
+    xi = (v*ts)*np.cos(angle)  # Formula to find the x position
+    yi = (v*ts)*np.sin(angle) - (g/2)*(ts**2)  # Formula to find y position
     x.append(xi)
     y.append(yi)
 
@@ -50,3 +42,4 @@ sys.exit()
 ##### References #####
 # https://newcontent.binus.ac.id/data_content/lecturer_shared_materials/main_material/IS1/201810150749390860002405_Data%20Visualization.pdf
 # projectile motion formula
+# and also pasha for finding the formula
