@@ -9,7 +9,7 @@ class Jet(Sprite):
         Sprite.__init__(self)
 
         # load jet image
-        self.image = image.load("nyan.gif")z
+        self.image = image.load("nyan.gif")
 
         # resize image
         self.image = pygame.transform.scale(self.image, (140, 50))
