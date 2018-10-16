@@ -46,3 +46,7 @@ elif ask == 'N':
 
 plot.show() # Print graph
 sys.exit()
+
+##### References #####
+# https://newcontent.binus.ac.id/data_content/lecturer_shared_materials/main_material/IS1/201810150749390860002405_Data%20Visualization.pdf
+# projectile motion formula
