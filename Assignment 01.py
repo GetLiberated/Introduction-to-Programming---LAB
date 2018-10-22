@@ -33,7 +33,7 @@ for y in range(0, lebar):
 print()
 
 #Triangle 5
-for y in range(0,lebar):
+for y in range(0,lebar+1):
     for x in range(0,lebar-y):
         print(end=" ")
     for x in range(0,y):
